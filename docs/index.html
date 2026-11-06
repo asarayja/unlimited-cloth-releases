@@ -137,8 +137,7 @@
    <p data-l="en">Copy the resource folders to <code>resources/</code> and add them to <code>server.cfg</code>. Try a new pack on a test server before you put it on a live one.</p>
    <p data-l="no">Kopier ressursmappene til <code>resources/</code> og legg dem til i <code>server.cfg</code>. Prøv en ny pakke på en testserver før du legger den på en ekte server.</p>
    <pre><code>ensure my_clothes
-ensure my_tattoos
-set game_enableStableOverlaySort true</code></pre></article>
+ensure my_tattoos</code></pre></article>
  </div>
 </section>
 
@@ -173,7 +172,7 @@ set game_enableStableOverlaySort true</code></pre></article>
    <ul data-l="en"><li>The overlay XML and <code>fxmanifest.lua</code> with <code>PED_OVERLAY_FILE</code>.</li><li>Optional <code>shop_tattoo.meta</code> (only the base game tattoo shop reads it).</li><li>Optional menu lists in <code>exports/</code>: qb (<code>AllTattoos.json</code>), esx (<code>Config.TattooList</code>) and illenium-appearance. Newer illenium-appearance versions find the tattoos in the overlay file by themselves, so that list is off by default.</li></ul>
    <ul data-l="no"><li>Overlay-XML og <code>fxmanifest.lua</code> med <code>PED_OVERLAY_FILE</code>.</li><li>Valgfri <code>shop_tattoo.meta</code> (bare spillets egen tatoveringsbutikk leser den).</li><li>Valgfrie menylister i <code>exports/</code>: qb (<code>AllTattoos.json</code>), esx (<code>Config.TattooList</code>) og illenium-appearance. Nyere versjoner av illenium-appearance finner tatoveringene selv i overlay-fila, så den lista er av som standard.</li></ul></article>
  </div>
- <div class="box info"><span data-l="en">Give the tattoo resource its own name. The program refuses to build if the tattoo and clothing resources would land in the same folder, because building one would move the other to the trash. Keep <code>set game_enableStableOverlaySort true</code> in <code>server.cfg</code>.</span><span data-l="no">Gi tatoveringsressursen et eget navn. Programmet nekter å bygge hvis tatoverings- og klesressursen ville havnet i samme mappe, fordi det ene bygget da ville flyttet det andre til papirkurven. Ha med <code>set game_enableStableOverlaySort true</code> i <code>server.cfg</code>.</span></div>
+ <div class="box info"><span data-l="en">Give the tattoo resource its own name. The program refuses to build if the tattoo and clothing resources would land in the same folder, because building one would move the other to the trash.</span><span data-l="no">Gi tatoveringsressursen et eget navn. Programmet nekter å bygge hvis tatoverings- og klesressursen ville havnet i samme mappe, fordi det ene bygget da ville flyttet det andre til papirkurven.</span></div>
 </section>
 
 <!-- ===================================================== studio -->
