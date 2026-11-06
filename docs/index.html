@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unlimited Cloth: FiveM clothing and tattoo builder</title>
+<meta name="description" content="Unlimited Cloth is a free desktop program for Windows and Linux that makes GTA V freemode clothing and tattoos ready for FiveM: pack builder, studio fix tools, 3D preview with animations and a tattoo builder.">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="img/logo-128.png">
+<link rel="stylesheet" href="style.css">
+<script>try{var l=localStorage.getItem('ucloth-lang');if(l==='no'){document.documentElement.setAttribute('data-lang','no');document.documentElement.lang='no';}}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main"><span data-l="en">Skip to content</span><span data-l="no">Hopp til innholdet</span></a>
+<header class="top">
+ <div class="wrap bar">
+  <a class="brand" href="#top"><img src="img/logo-128.png" width="32" height="32" alt=""><span>Unlimited <b>Cloth</b></span></a>
+  <button id="menuBtn" class="ctl" type="button" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></button>
+  <nav id="nav" aria-label="Main">
+   <a href="#what"><span data-l="en">Features</span><span data-l="no">Funksjoner</span></a>
+   <a href="#download"><span data-l="en">Download</span><span data-l="no">Last ned</span></a>
+   <a href="#install"><span data-l="en">Install</span><span data-l="no">Installer</span></a>
+   <a href="#start"><span data-l="en">Getting started</span><span data-l="no">Kom i gang</span></a>
+   <a href="#clothes"><span data-l="en">Clothing</span><span data-l="no">Klær</span></a>
+   <a href="#tattoos"><span data-l="en">Tattoos</span><span data-l="no">Tatoveringer</span></a>
+   <a href="#studio">Studio</a>
+   <a href="#policy">subdir_file_mapping</a>
+   <a href="#faq">FAQ</a>
+   <a href="#changelog">Changelog</a>
+  </nav>
+  <button id="langBtn" class="ctl" type="button" aria-label="Language / Språk"><span data-l="en">NO</span><span data-l="no">EN</span></button>
+ </div>
+</header>
+
+<main id="main">
+<!-- ===================================================== hero -->
+<section class="hero" id="top">
+ <div class="wrap">
+  <img class="logo" src="img/logo-256.png" width="112" height="112" alt="Unlimited Cloth logo">
+  <p class="badge"><span data-l="en">Free · MIT · Windows and Linux · version 1.0.0</span><span data-l="no">Gratis · MIT · Windows og Linux · versjon 1.0.0</span></p>
+  <h1><span data-l="en">FiveM clothing and tattoos, ready to stream</span><span data-l="no">FiveM-klær og tatoveringer, klare til å strømmes</span></h1>
+  <p class="lead"><span data-l="en">Unlimited Cloth makes GTA V freemode clothing and tattoos ready for FiveM. Import garments or whole addon packs, fix them in the studio, try them on the animated freemode ped and build a finished resource and .zip. Every file it writes is read back and checked.</span><span data-l="no">Unlimited Cloth gjør klær og tatoveringer for GTA V sine freemode-peds klare for FiveM. Importer plagg eller hele addon-pakker, fiks dem i studioet, prøv dem på den animerte freemode-pedden og bygg en ferdig ressurs og .zip. Hver fil programmet skriver, leses inn igjen og sjekkes.</span></p>
+  <p class="cta"><a class="btn primary" href="#download"><span data-l="en">Download 1.0.0</span><span data-l="no">Last ned 1.0.0</span></a><a class="btn" href="#start"><span data-l="en">Getting started</span><span data-l="no">Kom i gang</span></a><a class="btn" href="https://discord.gg/uaASPkghXu" rel="noopener">Discord</a></p>
+  <p class="note"><span data-l="en">No browser tab, no network port, no Blender, Python or CodeWalker needed. Made by Unlimited Reforge.</span><span data-l="no">Ingen nettleserfane, ingen nettverksport, og verken Blender, Python eller CodeWalker trengs. Laget av Unlimited Reforge.</span></p>
+  <div class="shot"><img src="img/studio.webp" width="1500" height="940" alt="The studio tab: the freemode ped wearing a test top and cap, with the fix tools on the right" fetchpriority="high"></div>
+ </div>
+</section>
+
+<!-- ===================================================== what it does -->
+<section class="wrap" id="what">
+ <h2><span data-l="en">What it does</span><span data-l="no">Hva det gjør</span></h2>
+ <p class="sub"><span data-l="en">One program for the whole job, from loose files to a resource you can <code>ensure</code>.</span><span data-l="no">Ett program for hele jobben, fra løse filer til en ressurs du kan <code>ensure</code>.</span></p>
+ <div class="grid">
+  <article class="card"><h3><span data-l="en">Clothing pack builder</span><span data-l="no">Pakkebygger for klær</span></h3>
+   <p data-l="en">Components and props for <code>mp_m_freemode_01</code> and <code>mp_f_freemode_01</code>, numbered for you, checked against the game's limits and written as <code>fxmanifest.lua</code>, <code>stream/</code>, <code>.ymt</code> and shop <code>.meta</code>, plus a .zip.</p>
+   <p data-l="no">Komponenter og props for <code>mp_m_freemode_01</code> og <code>mp_f_freemode_01</code>, nummerert for deg, sjekket mot spillets grenser og skrevet som <code>fxmanifest.lua</code>, <code>stream/</code>, <code>.ymt</code> og shop-<code>.meta</code>, pluss en .zip.</p></article>
+  <article class="card"><h3><span data-l="en">Studio fix tools</span><span data-l="no">Fiksverktøy i studioet</span></h3>
+   <p data-l="en">Copy weights from the body, push out of the body, fit and shrinkwrap, LODs, shaders, props, hair alternates, heels, cloth physics and texture tools. Every job is undoable.</p>
+   <p data-l="no">Kopier vekter fra kroppen, press ut av kroppen, tilpass og krymp, LOD-er, shadere, props, hår-alternativ, hæler, kledefysikk og teksturverktøy. Alle jobber kan angres.</p></article>
+  <article class="card"><h3><span data-l="en">3D preview and animations</span><span data-l="no">3D-visning og animasjoner</span></h3>
+   <p data-l="en">The freemode ped with skin and your garments, 31 poses and animations, and "Show clipping" marks in red where the body comes through, with how deep and at which bone.</p>
+   <p data-l="no">Freemode-pedden med hud og plaggene dine, 31 stillinger og animasjoner, og «Vis klipping» markerer i rødt hvor kroppen stikker gjennom, hvor dypt og ved hvilket bein.</p></article>
+  <article class="card"><h3><span data-l="en">Tattoo builder</span><span data-l="no">Tatoveringsbygger</span></h3>
+   <p data-l="en">PNG in, 512×512 DXT5 .ytd out. Place each tattoo per zone and per body in 3D or in the UV square, and get the overlay XML and ready lists for qb, esx and illenium-appearance.</p>
+   <p data-l="no">PNG inn, 512×512 DXT5 .ytd ut. Plasser hver tatovering per sone og per kropp i 3D eller i UV-ruta, og få overlay-XML og ferdige lister for qb, esx og illenium-appearance.</p></article>
+  <article class="card"><h3><span data-l="en">Safe with your files</span><span data-l="no">Trygt for filene dine</span></h3>
+   <p data-l="en">Fix jobs work on a copy in the project folder, so your original is never changed. Nothing is ever deleted for good: an old build goes to the system trash.</p>
+   <p data-l="no">Fiksjobber jobber på en kopi i prosjektmappa, så originalen endres aldri. Ingenting slettes for godt: et gammelt bygg havner i papirkurven.</p></article>
+  <article class="card"><h3><span data-l="en">Projects and languages</span><span data-l="no">Prosjekter og språk</span></h3>
+   <p data-l="en">Plain JSON projects (<code>.ucloth</code>) with relative paths that open on both Windows and Linux, autosave for crash recovery, undo and redo. The program speaks 12 languages.</p>
+   <p data-l="no">Prosjekter i vanlig JSON (<code>.ucloth</code>) med relative stier som åpnes på både Windows og Linux, autolagring ved krasj, angre og gjør om. Programmet har 12 språk.</p></article>
+ </div>
+ <div class="gallery">
+  <figure><img src="img/clipping.webp" width="1500" height="940" loading="lazy" alt="Show clipping marking where the body comes through a garment in the walk animation"><figcaption><span data-l="en">Show clipping in the walk animation</span><span data-l="no">Vis klipping i gå-animasjonen</span></figcaption></figure>
+  <figure><img src="img/tattoos.webp" width="1500" height="940" loading="lazy" alt="A tattoo placed on the chest zone in 3D"><figcaption><span data-l="en">A tattoo placed in 3D</span><span data-l="no">En tatovering plassert i 3D</span></figcaption></figure>
+  <figure><img src="img/build.webp" width="1500" height="940" loading="lazy" alt="The Build tab with the plan and the re-read check"><figcaption><span data-l="en">Build: the plan and the re-read check</span><span data-l="no">Bygg: planen og kontrollen etterpå</span></figcaption></figure>
+ </div>
+</section>
+
+<!-- ===================================================== download -->
+<section class="wrap" id="download">
+ <h2><span data-l="en">Download</span><span data-l="no">Last ned</span></h2>
+ <p class="sub"><span data-l="en">Version 1.0.0. All files are on the GitHub release page, together with the release notes.</span><span data-l="no">Versjon 1.0.0. Alle filene ligger på GitHub-utgivelsen, sammen med utgivelsesnotatene.</span></p>
+ <div class="dl">
+  <a class="card" href="https://github.com/asarayja/unlimited-cloth-releases/releases/download/v1.0.0/Unlimited-Cloth-Setup-1.0.0.exe"><h3>Windows <span class="tag">x64</span></h3><p><span data-l="en">Installer: pick a folder, get shortcuts, uninstall from Apps.</span><span data-l="no">Installer: velg mappe, få snarveier, avinstaller under Apper.</span></p><span class="file">Unlimited-Cloth-Setup-1.0.0.exe</span></a>
+  <a class="card" href="https://github.com/asarayja/unlimited-cloth-releases/releases/download/v1.0.0/unlimited-cloth_1.0.0_amd64.deb"><h3>Linux .deb <span class="tag">amd64</span></h3><p><span data-l="en">Debian, Ubuntu, Mint, Pop!_OS and other apt systems.</span><span data-l="no">Debian, Ubuntu, Mint, Pop!_OS og andre apt-systemer.</span></p><span class="file">unlimited-cloth_1.0.0_amd64.deb</span></a>
+  <a class="card" href="https://github.com/asarayja/unlimited-cloth-releases/releases/download/v1.0.0/Unlimited-Cloth-1.0.0-x86_64.AppImage"><h3>Linux AppImage <span class="tag">x86_64</span></h3><p><span data-l="en">One file that runs on most distributions, with no install.</span><span data-l="no">Én fil som kjører på de fleste distribusjoner, uten installasjon.</span></p><span class="file">Unlimited-Cloth-1.0.0-x86_64.AppImage</span></a>
+ </div>
+ <p class="note"><a href="https://github.com/asarayja/unlimited-cloth-releases/releases"><span data-l="en">All releases</span><span data-l="no">Alle utgivelser</span></a> · <span data-l="en">The freemode peds the preview uses come with the program; nothing else has to be downloaded.</span><span data-l="no">Freemode-peddene som visningen bruker, følger med programmet. Ingenting annet må lastes ned.</span></p>
+</section>
+
+<!-- ===================================================== install -->
+<section class="wrap" id="install">
+ <h2><span data-l="en">Install</span><span data-l="no">Installer</span></h2>
+ <div class="grid2">
+  <article class="card"><h3>Windows</h3>
+   <ol data-l="en"><li>Run <code>Unlimited-Cloth-Setup-1.0.0.exe</code>.</li><li>Pick the install folder. Desktop and Start menu shortcuts are made.</li><li>Uninstall later under Settings → Apps.</li></ol>
+   <ol data-l="no"><li>Kjør <code>Unlimited-Cloth-Setup-1.0.0.exe</code>.</li><li>Velg installasjonsmappe. Snarveier på skrivebordet og i Start-menyen lages.</li><li>Avinstaller senere under Innstillinger → Apper.</li></ol>
+   <div class="box warn" data-l="en"><b>"Windows protected your PC" / unknown publisher.</b> The installer is not code-signed yet, so Microsoft SmartScreen may stop it the first time. Click <b>More info</b>, check that the file is the one from the release page, then click <b>Run anyway</b>.</div>
+   <div class="box warn" data-l="no"><b>«Windows beskyttet PC-en» / ukjent utgiver.</b> Installeren er ikke kodesignert ennå, så Microsoft SmartScreen kan stoppe den første gang. Trykk <b>Mer informasjon</b>, sjekk at fila er den fra utgivelsessiden, og trykk så <b>Kjør likevel</b>.</div>
+  </article>
+  <article class="card"><h3>Linux</h3>
+   <p data-l="en"><b>.deb</b> (Debian, Ubuntu and friends):</p><p data-l="no"><b>.deb</b> (Debian, Ubuntu og lignende):</p>
+   <pre><code>sudo apt install ./unlimited-cloth_1.0.0_amd64.deb</code></pre>
+   <p data-l="en" style="margin-top:10px"><b>AppImage</b>: make it executable and run it.</p><p data-l="no" style="margin-top:10px"><b>AppImage</b>: gjør den kjørbar og start den.</p>
+   <pre><code>chmod +x Unlimited-Cloth-1.0.0-x86_64.AppImage
+./Unlimited-Cloth-1.0.0-x86_64.AppImage</code></pre>
+   <div class="box info" data-l="en">If the AppImage does not start on Ubuntu 22.04 or newer, install FUSE 2: <code>sudo apt install libfuse2</code> (<code>libfuse2t64</code> on 24.04).</div>
+   <div class="box info" data-l="no">Hvis AppImage ikke starter på Ubuntu 22.04 eller nyere, installer FUSE 2: <code>sudo apt install libfuse2</code> (<code>libfuse2t64</code> på 24.04).</div>
+  </article>
+ </div>
+ <div class="card" style="margin-top:14px"><h3><span data-l="en">Where things are kept</span><span data-l="no">Hvor ting lagres</span></h3>
+  <p data-l="en">Settings, autosave and your own peds: <code>%APPDATA%\Unlimited Cloth</code> on Windows, <code>~/.config/Unlimited Cloth</code> on Linux. Built resources go to <code>Documents/Unlimited Cloth/build</code> unless you choose another folder.</p>
+  <p data-l="no">Innstillinger, autolagring og egne peds: <code>%APPDATA%\Unlimited Cloth</code> på Windows, <code>~/.config/Unlimited Cloth</code> på Linux. Bygde ressurser havner i <code>Dokumenter/Unlimited Cloth/build</code> hvis du ikke velger en annen mappe.</p></div>
+</section>
+
+<!-- ===================================================== getting started -->
+<section class="wrap" id="start">
+ <h2><span data-l="en">Getting started</span><span data-l="no">Kom i gang</span></h2>
+ <div class="grid">
+  <article class="card"><h3>1 · <span data-l="en">First-run setup</span><span data-l="no">Førstegangsoppsett</span></h3>
+   <p data-l="en">The program starts in English and walks you through language, preferences, folders, peds and the defaults for new projects. You can skip it and run it again from <b>?</b> → Run setup again.</p>
+   <p data-l="no">Programmet starter på engelsk og tar deg gjennom språk, innstillinger, mapper, peds og standardvalg for nye prosjekter. Du kan hoppe over det og kjøre det igjen fra <b>?</b> → Kjør oppsett på nytt.</p></article>
+  <article class="card"><h3>2 · <span data-l="en">Try it with test content</span><span data-l="no">Prøv med testinnhold</span></h3>
+   <p data-l="en">Press <b>Test garments</b> on the Garments tab. You get a test top for each body and a cap for both, made by the program itself, so you can try every tool before you use your own files.</p>
+   <p data-l="no">Trykk <b>Test garments</b> på Plagg-fanen. Da får du en testoverdel for hver kropp og en caps for begge, laget av programmet selv, så du kan prøve alle verktøyene før du bruker egne filer.</p></article>
+  <article class="card"><h3>3 · <span data-l="en">Import your garments</span><span data-l="no">Importer plaggene dine</span></h3>
+   <p data-l="en"><b>+ Import files</b> takes <code>.ydd</code>, <code>.ytd</code>, <code>.yld</code>, Sollumz/CodeWalker <code>.ydd.xml</code>, <code>.glb</code>, <code>.obj</code>, <code>.blend</code> and <code>.png</code>. <b>Folder / pack</b> takes a whole folder or an existing addon pack.</p>
+   <p data-l="no"><b>+ Import files</b> tar <code>.ydd</code>, <code>.ytd</code>, <code>.yld</code>, Sollumz/CodeWalker <code>.ydd.xml</code>, <code>.glb</code>, <code>.obj</code>, <code>.blend</code> og <code>.png</code>. <b>Folder / pack</b> tar en hel mappe eller en eksisterende addon-pakke.</p></article>
+  <article class="card"><h3>4 · <span data-l="en">Body, slot and textures</span><span data-l="no">Kropp, plass og teksturer</span></h3>
+   <p data-l="en">For each garment choose the body (male, female or both), the component or prop slot and up to 26 texture variants (a–z). A <b>!</b> in the list means something is still missing.</p>
+   <p data-l="no">Velg kropp (mann, kvinne eller begge), komponent- eller prop-plass og opptil 26 teksturvarianter (a–z) for hvert plagg. Et <b>!</b> i lista betyr at noe fortsatt mangler.</p></article>
+  <article class="card"><h3>5 · <span data-l="en">Check, then build</span><span data-l="no">Sjekk, og bygg</span></h3>
+   <p data-l="en">On the Build tab press <b>Check (plan)</b> to see every file, number and limit before anything is written. Then <b>Build everything</b>. The result is read back and checked.</p>
+   <p data-l="no">På Bygg-fanen trykker du <b>Check (plan)</b> for å se alle filer, numre og grenser før noe skrives. Deretter <b>Build everything</b>. Resultatet leses inn igjen og sjekkes.</p></article>
+  <article class="card"><h3>6 · <span data-l="en">On the server</span><span data-l="no">På serveren</span></h3>
+   <p data-l="en">Copy the resource folders to <code>resources/</code> and add them to <code>server.cfg</code>. Try a new pack on a test server before you put it on a live one.</p>
+   <p data-l="no">Kopier ressursmappene til <code>resources/</code> og legg dem til i <code>server.cfg</code>. Prøv en ny pakke på en testserver før du legger den på en ekte server.</p>
+   <pre><code>ensure my_clothes
+ensure my_tattoos
+set game_enableStableOverlaySort true</code></pre></article>
+ </div>
+</section>
+
+<!-- ===================================================== clothing builder -->
+<section class="wrap" id="clothes">
+ <h2><span data-l="en">Clothing builder</span><span data-l="no">Klesbyggeren</span></h2>
+ <p class="sub"><span data-l="en">The Garments tab holds the list; the Build tab writes the resource.</span><span data-l="no">Plagg-fanen har lista, og Bygg-fanen skriver ressursen.</span></p>
+ <div class="grid2">
+  <article class="card"><h3><span data-l="en">Numbers</span><span data-l="no">Numre</span></h3>
+   <ul data-l="en"><li>The order in the list is the number: empty means the next free number in that slot.</li><li>A fixed number keeps saved outfits pointing at the same garment. If two garments ask for the same number, the first keeps it and the other gets the next free one, and the plan says so.</li><li>Past 255 drawables of one kind the rest go into a second collection (<code>&lt;collection&gt;2</code>).</li><li>A gap below the highest number is filled with an invisible dummy, because the game reads 000 upwards.</li></ul>
+   <ul data-l="no"><li>Rekkefølgen i lista er nummeret: tomt betyr neste ledige nummer på den plassen.</li><li>Et fast nummer gjør at lagrede antrekk peker på det samme plagget. Hvis to plagg vil ha samme nummer, beholder det første det, og det andre får neste ledige. Planen sier fra.</li><li>Over 255 drawables av én type havner resten i en ny samling (<code>&lt;samling&gt;2</code>).</li><li>Et hull under det høyeste nummeret fylles med en usynlig dummy, fordi spillet leser fra 000 og oppover.</li></ul></article>
+  <article class="card"><h3><span data-l="en">Limits it checks</span><span data-l="no">Grenser den sjekker</span></h3>
+   <ul data-l="en"><li>255 drawables per slot and body, 26 textures (a–z) per garment.</li><li>Ped streaming slots for the server's game build.</li><li>Shop entries, file name length (under 128 bytes), lower-case names.</li><li>A garment without a slot, a body or a texture is a fault, never guessed.</li></ul>
+   <ul data-l="no"><li>255 drawables per plass og kropp, 26 teksturer (a–z) per plagg.</li><li>Ped-strømmingsplasser for serverens game build.</li><li>Butikkoppføringer, lengden på filnavn (under 128 byte) og små bokstaver.</li><li>Et plagg uten plass, kropp eller tekstur er en feil og blir aldri gjettet.</li></ul></article>
+  <article class="card"><h3><span data-l="en">What is written</span><span data-l="no">Hva som skrives</span></h3>
+   <p data-l="en"><code>fxmanifest.lua</code>, <code>stream/</code> with the models, textures and cloth physics, one <code>.ymt</code> and one shop <code>.meta</code> per body, first-person models (<code>_1.ydd</code>), hair swaps (<code>pedalternatevariations.meta</code>), heel heights, and a <code>.zip</code> of the folder.</p>
+   <p data-l="no"><code>fxmanifest.lua</code>, <code>stream/</code> med modeller, teksturer og kledefysikk, én <code>.ymt</code> og én shop-<code>.meta</code> per kropp, førstepersonsmodeller (<code>_1.ydd</code>), hair swaps (<code>pedalternatevariations.meta</code>), hælhøyder og en <code>.zip</code> av mappa.</p></article>
+  <article class="card"><h3><span data-l="en">Rebuilding an existing pack</span><span data-l="no">Bygge en eksisterende pakke på nytt</span></h3>
+   <p data-l="en">Import a built pack with <b>Folder / pack</b> to rename its collection or join packs. Flags, audio profiles, heel heights, prop hair, hair swaps and the collection name come back from its <code>.ymt</code> and <code>.meta</code> files.</p>
+   <p data-l="no">Importer en bygd pakke med <b>Folder / pack</b> for å gi samlingen nytt navn eller slå sammen pakker. Flagg, lydprofiler, hælhøyder, prop-hår, hair swaps og samlingsnavnet hentes fra pakkens <code>.ymt</code>- og <code>.meta</code>-filer.</p></article>
+ </div>
+</section>
+
+<!-- ===================================================== tattoos -->
+<section class="wrap" id="tattoos">
+ <h2><span data-l="en">Tattoos</span><span data-l="no">Tatoveringer</span></h2>
+ <div class="grid2">
+  <article class="card"><h3><span data-l="en">Make and place</span><span data-l="no">Lag og plasser</span></h3>
+   <ul data-l="en"><li><b>+ Tattoo (PNG)</b>: each picture becomes a 512×512 DXT5 <code>.ytd</code>. A ready <code>.ytd</code> works too; its texture is renamed to the tattoo's Id in the build.</li><li>Choose the body zone, then place it separately on the male and the female body: in 3D on the ped, or in the UV square (drag to move, mouse wheel to resize).</li><li>The Id is the hash name. When it is empty, the file name is used.</li></ul>
+   <ul data-l="no"><li><b>+ Tattoo (PNG)</b>: hvert bilde blir en 512×512 DXT5 <code>.ytd</code>. En ferdig <code>.ytd</code> går også. Teksturen i den får tatoveringens Id i bygget.</li><li>Velg kroppssone og plasser den hver for seg på mann og kvinne: i 3D på pedden, eller i UV-ruta (dra for å flytte, musehjulet for å endre størrelse).</li><li>Id-en er hash-navnet. Er den tom, brukes filnavnet.</li></ul></article>
+  <article class="card"><h3><span data-l="en">What is written</span><span data-l="no">Hva som skrives</span></h3>
+   <ul data-l="en"><li>The overlay XML and <code>fxmanifest.lua</code> with <code>PED_OVERLAY_FILE</code>.</li><li>Optional <code>shop_tattoo.meta</code> (only the base game tattoo shop reads it).</li><li>Optional menu lists in <code>exports/</code>: qb (<code>AllTattoos.json</code>), esx (<code>Config.TattooList</code>) and illenium-appearance. Newer illenium-appearance versions find the tattoos in the overlay file by themselves, so that list is off by default.</li></ul>
+   <ul data-l="no"><li>Overlay-XML og <code>fxmanifest.lua</code> med <code>PED_OVERLAY_FILE</code>.</li><li>Valgfri <code>shop_tattoo.meta</code> (bare spillets egen tatoveringsbutikk leser den).</li><li>Valgfrie menylister i <code>exports/</code>: qb (<code>AllTattoos.json</code>), esx (<code>Config.TattooList</code>) og illenium-appearance. Nyere versjoner av illenium-appearance finner tatoveringene selv i overlay-fila, så den lista er av som standard.</li></ul></article>
+ </div>
+ <div class="box info"><span data-l="en">Give the tattoo resource its own name. The program refuses to build if the tattoo and clothing resources would land in the same folder, because building one would move the other to the trash. Keep <code>set game_enableStableOverlaySort true</code> in <code>server.cfg</code>.</span><span data-l="no">Gi tatoveringsressursen et eget navn. Programmet nekter å bygge hvis tatoverings- og klesressursen ville havnet i samme mappe, fordi det ene bygget da ville flyttet det andre til papirkurven. Ha med <code>set game_enableStableOverlaySort true</code> i <code>server.cfg</code>.</span></div>
+</section>
+
+<!-- ===================================================== studio -->
+<section class="wrap" id="studio">
+ <h2><span data-l="en">Studio tools</span><span data-l="no">Studioverktøy</span></h2>
+ <p class="sub"><span data-l="en">Jobs work on a copy of the model in the project folder. Every job can be undone with Ctrl+Z, files included. A job that fails puts the file back as it was.</span><span data-l="no">Jobbene jobber på en kopi av modellen i prosjektmappa. Alle jobber kan angres med Ctrl+Z, også filene. En jobb som feiler, legger fila tilbake slik den var.</span></p>
+ <div class="tbl"><table>
+  <tr><th><span data-l="en">Group</span><span data-l="no">Gruppe</span></th><th><span data-l="en">Tools</span><span data-l="no">Verktøy</span></th></tr>
+  <tr><td><span data-l="en">Weights</span><span data-l="no">Vekter</span></td><td><span data-l="en">Copy weights from the body, smooth weights, make weights legal, sync seam weights</span><span data-l="no">Kopier vekter fra kroppen, glatt vekter, gjør vektene lovlige, synk sømvekter</span></td></tr>
+  <tr><td><span data-l="en">Fit and shape</span><span data-l="no">Passform</span></td><td><span data-l="en">Push out of the body, inflate/deflate, fit to body, shrinkwrap, hem above floor, mirror, align and taper sleeves, move/turn/scale</span><span data-l="no">Press ut av kroppen, blås opp/ned, tilpass, krymp til kroppen, kant over gulvet, speil, rett inn og smalne ermer, flytt/roter/skaler</span></td></tr>
+  <tr><td>Mesh</td><td><span data-l="en">Fix normals, weld seams, close openings, close gaps to another piece, solidify, rewrite the whole file</span><span data-l="no">Fiks normaler, sveis sømmer, lukk åpninger, lukk gap mot et annet plagg, solidify, skriv hele fila på nytt</span></td></tr>
+  <tr><td><span data-l="en">Level of detail</span><span data-l="no">Detaljnivå</span></td><td><span data-l="en">Make LODs, weight the LODs, reduce triangles</span><span data-l="no">Lag LOD-er, vekt LOD-ene, reduser triangler</span></td></tr>
+  <tr><td><span data-l="en">Props, hair, heels, physics</span><span data-l="no">Props, hår, hæler, fysikk</span></td><td><span data-l="en">Make into prop (choose the prop slot), hair alternate, heel pose, heel bones, make cloth physics (.yld), rebind cloth physics, crop unused texture</span><span data-l="no">Gjør om til prop (velg prop-plass), hår-alternativ, hælstilling, hælbein, lag kledefysikk (.yld), bind kledefysikk på nytt, beskjær ubrukt tekstur</span></td></tr>
+  <tr><td>Shader</td><td><span data-l="en">27 ped shaders, with a note on what each one is for</span><span data-l="no">27 ped-shadere, med en forklaring på hva hver er til</span></td></tr>
+  <tr><td><span data-l="en">Textures</span><span data-l="no">Teksturer</span></td><td><span data-l="en">New variant from PNG (DXT1/DXT5 with mipmaps), recolour with preview, replace, export as PNG, normal and spec maps</span><span data-l="no">Ny variant fra PNG (DXT1/DXT5 med mipmaps), farg om med forhåndsvisning, bytt ut, eksporter som PNG, normal- og spec-kart</span></td></tr>
+  <tr><td><span data-l="en">Export</span><span data-l="no">Eksport</span></td><td><span data-l="en">Sollumz / CodeWalker XML with the freemode skeleton beside it, and .obj</span><span data-l="no">Sollumz-/CodeWalker-XML med freemode-skjelettet ved siden av, og .obj</span></td></tr>
+ </table></div>
+</section>
+
+<!-- ===================================================== subdir_file_mapping -->
+<section class="wrap" id="policy">
+ <h2>subdir_file_mapping</h2>
+ <div class="card">
+  <p data-l="en">The Build tab has a <code>subdir_file_mapping</code> checkbox. When it is on, the clothing resource's <code>fxmanifest.lua</code> gets:</p>
+  <p data-l="no">Bygg-fanen har en avkrysningsboks for <code>subdir_file_mapping</code>. Når den er på, får klesressursens <code>fxmanifest.lua</code> denne linjen:</p>
+  <pre><code>dependencies { '/policy:subdir_file_mapping' }</code></pre>
+  <ul data-l="en" style="margin-top:12px">
+   <li><b>Off is the default.</b> With the line, a server that does not have the policy refuses to start the resource at all.</li>
+   <li><b>Without the line</b>, a server that lacks the policy loads the pack and shows no clothes, with nothing in the console. A server with 10 slots or fewer gets the policy automatically; above that it comes with an Element Club Argentum (or higher) subscription.</li>
+   <li><b>Turn it on</b> when your server has more than 10 slots and has the policy, so a missing policy shows up as a clear start error instead of invisible clothes. Leave it off on a server with 10 slots or fewer.</li>
+   <li>The build plan reminds you when it is off. Whether the line is needed has not been proven in game yet, so test on your own server.</li>
+  </ul>
+  <ul data-l="no" style="margin-top:12px">
+   <li><b>Av er standard.</b> Med linjen nekter en server uten policyen å starte ressursen i det hele tatt.</li>
+   <li><b>Uten linjen</b> laster en server uten policyen pakken, men viser ingen klær, og ingenting står i konsollen. En server med 10 plasser eller færre får policyen automatisk. Over det følger den med et Element Club Argentum-abonnement (eller høyere).</li>
+   <li><b>Slå den på</b> når serveren har mer enn 10 plasser og har policyen, slik at en manglende policy gir en tydelig startfeil i stedet for usynlige klær. La den være av på en server med 10 plasser eller færre.</li>
+   <li>Byggeplanen minner deg på det når den er av. Om linjen trengs, er ikke bevist i spillet ennå, så test på din egen server.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ===================================================== FAQ -->
+<section class="wrap" id="faq">
+ <h2>FAQ</h2>
+ <details><summary><span data-l="en">Is it free?</span><span data-l="no">Er det gratis?</span></summary><p data-l="en">Yes. Unlimited Cloth is free and open under the MIT licence, made by Unlimited Reforge.</p><p data-l="no">Ja. Unlimited Cloth er gratis og åpent under MIT-lisensen, laget av Unlimited Reforge.</p></details>
+ <details><summary><span data-l="en">Do I need GTA V, Blender or CodeWalker?</span><span data-l="no">Trenger jeg GTA V, Blender eller CodeWalker?</span></summary><p data-l="en">No. The program reads and writes the game formats itself, and the freemode peds for the preview come with it. On the Peds tab you can use files from your own game instead (optional).</p><p data-l="no">Nei. Programmet leser og skriver spillformatene selv, og freemode-peddene til visningen følger med. På Peds-fanen kan du bruke filer fra ditt eget spill i stedet (valgfritt).</p></details>
+ <details><summary><span data-l="en">Which clothing menus does it work with?</span><span data-l="no">Hvilke klesmenyer virker det med?</span></summary><p data-l="en">The clothing resource is a normal addon pack, so any menu that reads addon clothing shows it. For tattoos the program writes lists for qb, esx and illenium-appearance. Check the field names against your version of the menu.</p><p data-l="no">Klesressursen er en vanlig addon-pakke, så alle menyer som leser addon-klær, viser den. For tatoveringer lager programmet lister for qb, esx og illenium-appearance. Sjekk feltnavnene mot din versjon av menyen.</p></details>
+ <details><summary><span data-l="en">Will it change my original files?</span><span data-l="no">Endrer det originalfilene mine?</span></summary><p data-l="en">No. Fix jobs work on a copy in the project folder, and anything in the way (an old build, for example) goes to the system trash. Nothing is deleted for good.</p><p data-l="no">Nei. Fiksjobber jobber på en kopi i prosjektmappa, og alt som er i veien (for eksempel et gammelt bygg), havner i papirkurven. Ingenting slettes for godt.</p></details>
+ <details><summary><span data-l="en">My clothes do not show in game</span><span data-l="no">Klærne vises ikke i spillet</span></summary><ul data-l="en"><li>Check the server's slot count and the <a href="#policy">subdir_file_mapping</a> policy.</li><li>Make sure the resource is started (<code>ensure</code>) and the server's game build matches the one chosen on the Build tab.</li><li>Use <b>Check an existing pack…</b> on the Build tab to read the folder back.</li></ul><ul data-l="no"><li>Sjekk hvor mange plasser serveren har, og <a href="#policy">subdir_file_mapping</a>-policyen.</li><li>Sjekk at ressursen er startet (<code>ensure</code>), og at serverens game build er den samme som du valgte på Bygg-fanen.</li><li>Bruk <b>Check an existing pack…</b> på Bygg-fanen for å lese mappa inn igjen.</li></ul></details>
+ <details><summary><span data-l="en">Why does Windows warn about an unknown publisher?</span><span data-l="no">Hvorfor advarer Windows om ukjent utgiver?</span></summary><p data-l="en">The installer is not code-signed yet. See <a href="#install">Install</a> for how to get past SmartScreen.</p><p data-l="no">Installeren er ikke kodesignert ennå. Se <a href="#install">Installer</a> for hvordan du kommer forbi SmartScreen.</p></details>
+ <details><summary><span data-l="en">Where do I get help?</span><span data-l="no">Hvor får jeg hjelp?</span></summary><p data-l="en">Questions, bugs and ideas go to the <a href="https://discord.gg/uaASPkghXu" rel="noopener">Unlimited Discord</a>. The program has no e-mail address.</p><p data-l="no">Spørsmål, feil og ideer tas i <a href="https://discord.gg/uaASPkghXu" rel="noopener">Unlimited Discord</a>. Programmet har ingen e-postadresse.</p></details>
+</section>
+
+<!-- ===================================================== changelog -->
+<section class="wrap" id="changelog">
+ <h2>Changelog</h2>
+ <div class="card">
+  <div class="ver"><h3>1.0.0</h3><small><span data-l="en">first release</span><span data-l="no">første utgivelse</span></small></div>
+  <ul data-l="en">
+   <li>Clothing pack builder: import of .ydd/.ytd/.yld, whole addon packs, .ydd.xml, .glb, .obj and .blend; numbering, limit checks, a second collection past 255, .zip.</li>
+   <li>Rebuilding a pack keeps its flags, audio, heels, prop hair, hair swaps and collection name.</li>
+   <li>Studio with fix jobs for weights, fit, mesh, LODs, props, hair, heels and cloth physics, 27 shaders, texture tools and Sollumz/.obj export; undo and redo for every job.</li>
+   <li>3D preview with 31 poses and animations and a clipping check.</li>
+   <li>Tattoo builder with 3D and UV placement, overlay XML, shop_tattoo.meta and lists for qb, esx and illenium-appearance.</li>
+   <li>Every built file is read back: models (with a round trip), textures, .ymt (components and props), shop meta, mounted data files and the engine's own pack checks.</li>
+   <li>Bundled freemode peds; your own game files are optional and fill in only what you give them.</li>
+   <li>First-run setup, 12 languages, autosave and crash recovery.</li>
+  </ul>
+  <ul data-l="no">
+   <li>Pakkebygger for klær: import av .ydd/.ytd/.yld, hele addon-pakker, .ydd.xml, .glb, .obj og .blend; nummerering, grensesjekker, ny samling over 255, .zip.</li>
+   <li>Når en pakke bygges på nytt, beholdes flagg, lyd, hæler, prop-hår, hair swaps og samlingsnavn.</li>
+   <li>Studio med fiksjobber for vekter, passform, mesh, LOD-er, props, hår, hæler og kledefysikk, 27 shadere, teksturverktøy og eksport til Sollumz/.obj; angre og gjør om for alle jobber.</li>
+   <li>3D-visning med 31 stillinger og animasjoner og klippesjekk.</li>
+   <li>Tatoveringsbygger med plassering i 3D og UV, overlay-XML, shop_tattoo.meta og lister for qb, esx og illenium-appearance.</li>
+   <li>Hver bygde fil leses inn igjen: modeller (med round trip), teksturer, .ymt (komponenter og props), shop-meta, monterte datafiler og motorens egne pakkesjekker.</li>
+   <li>Freemode-peds følger med; egne spillfiler er valgfrie og fyller bare inn det du gir dem.</li>
+   <li>Førstegangsoppsett, 12 språk, autolagring og gjenoppretting etter krasj.</li>
+  </ul>
+  <div class="box warn"><span data-l="en">Known limits: newly written .ydd files have only been proven in game with the test pack, importing from a GTA V install is untested, and the Windows build is new. Test on a test server first.</span><span data-l="no">Kjente begrensninger: nyskrevne .ydd-filer er bare bevist i spillet med testpakken, import fra en GTA V-installasjon er ikke testet, og Windows-versjonen er ny. Test på en testserver først.</span></div>
+ </div>
+</section>
+
+<!-- ===================================================== discord -->
+<section class="wrap" id="discord">
+ <div class="card" style="text-align:center;padding:26px 18px">
+  <h2><span data-l="en">Questions? Join the Discord</span><span data-l="no">Spørsmål? Bli med på Discord</span></h2>
+  <p class="sub" style="margin:0 auto 16px"><span data-l="en">Support, bug reports and ideas for Unlimited Cloth and the rest of Unlimited.</span><span data-l="no">Support, feilmeldinger og ideer for Unlimited Cloth og resten av Unlimited.</span></p>
+  <a class="btn primary" href="https://discord.gg/uaASPkghXu" rel="noopener"><span data-l="en">Open the Unlimited Discord</span><span data-l="no">Åpne Unlimited Discord</span></a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 Unlimited Reforge · <span data-l="en">MIT licence</span><span data-l="no">MIT-lisens</span></span>
+  <span data-l="en">The bundled freemode peds are derived from Rockstar Games assets. Unlimited Reforge is not affiliated with Rockstar Games or Cfx.re.</span>
+  <span data-l="no">De innebygde freemode-peddene er avledet av Rockstar Games sine filer. Unlimited Reforge har ingen tilknytning til Rockstar Games eller Cfx.re.</span>
+  <a href="https://discord.gg/uaASPkghXu" rel="noopener">Discord</a>
+ </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
